@@ -25,5 +25,8 @@ pom.xml.asc
 
 src/ui-release/shadow-css-index.edn
 
+examples/components/js/
+examples/components/css/
+
 .hgignore
 .hg/
