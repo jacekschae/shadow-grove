@@ -39,6 +39,17 @@
               {:keys [warning-type] :as warning} (:warnings mod)]
         (prn [:CSS (name warning-type) (dissoc warning :warning-type)])))
 
+    ;; components
+    (let [build-state
+          (-> build-state
+              (cb/index-path (io/file "src" "dev") {})
+              (cb/generate '{:ui {:include [dummy.components shadow.grove.ui*]}})
+              (cb/write-outputs-to (io/file "examples" "components" "css")))]
+
+      (doseq [mod (:outputs build-state)
+              {:keys [warning-type] :as warning} (:warnings mod)]
+        (prn [:CSS (name warning-type) (dissoc warning :warning-type)])))
+
     ;; devtools
     (let [build-state
           (-> build-state

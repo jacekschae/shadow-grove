@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/jacek/Projects/shadow-grove log --oneline -20)",
+      "Bash(git -C /Users/jacek/Projects/shadow-grove log --all --oneline)",
+      "Bash(wc -l:*)",
+      "Bash(git -C /Users/jacek/Projects/shadow-grove log --oneline)",
+      "Bash(git -C /Users/jacek/Projects/shadow-grove show -s --format=%ai HEAD)",
+      "WebFetch(domain:ui.shadcn.com)",
+      "Bash(ls:*)"
+    ]
+  }
+}

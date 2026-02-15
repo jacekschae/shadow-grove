@@ -30,7 +30,8 @@
   3013 "examples/ui"
   3014 "examples/dummy"
   3015 "examples/flex"
-  3016 "examples/replicant"}
+  3016 "examples/replicant"
+  3017 "examples/components"}
 
  :build-defaults
  {:compiler-options
@@ -139,4 +140,10 @@
    :output-dir "examples/bench-fragment/js"
    :modules {:main {:init-fn shadow.grove.bench-fragment/init}}
    :devtools {:enabled false}}
+
+  :components
+  {:target :browser
+   :output-dir "examples/components/js"
+   :asset-path "/js"
+   :modules {:main {:init-fn dummy.components/init}}}
   }}
